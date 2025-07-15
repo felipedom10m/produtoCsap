@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>produtoCsap - Área do Aluno</title>
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { font-family: Arial, sans-serif; background: #f5f5f5; }
+        .header { background: #007bff; color: white; padding: 20px; text-align: center; }
+        .container { max-width: 1200px; margin: 20px auto; padding: 20px; }
+        .modules { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 20px; }
+        .module { background: white; padding: 20px; border-radius: 10px; box-shadow: 0 2px 5px rgba(0,0,0,0.1); }
+        .module h3 { color: #007bff; margin-bottom: 15px; }
+        .file-list { list-style: none; }
+        .file-item { padding: 10px; border-bottom: 1px solid #eee; cursor: pointer; }
+        .file-item:hover { background: #f8f9fa; }
+        .file-icon { margin-right: 10px; }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <h1>🎓 produtoCsap</h1>
+        <p>Bem-vindo à sua área de membros</p>
+    </div>
+    <div class="container">
+        <div class="modules">
+            <div class="module">
+                <h3>📚 Materiais do Curso</h3>
+                <ul class="file-list">
+                    
+                        <li class="file-item">
+                            <span class="file-icon">📁</span>
+                            76.mp4
+                        </li>
+                    
+                        <li class="file-item">
+                            <span class="file-icon">📁</span>
+                            77.mp4
+                        </li>
+                    
+                </ul>
+            </div>
+            <div class="module">
+                <h3>💬 Suporte</h3>
+                <p>Precisa de ajuda? Entre em contato conosco:</p>
+                <p>📧 Email: suporte@seusite.com</p>
+                <p>📱 WhatsApp: (11) 99999-9999</p>
+            </div>
+        </div>
+    </div>
+    <script>
+        // Verificar autenticação
+        if (!localStorage.getItem('memberAuth')) {
+            window.location.href = 'index.html';
+        }
+    </script>
+</body>
+</html>
